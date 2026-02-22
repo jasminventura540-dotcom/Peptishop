@@ -1,0 +1,356 @@
+:root {
+    --pepti-green: #2E8B57;
+    --dark-slate: #1a1a1a;
+    --soft-white: #f9f9f9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--soft-white);
+    color: var(--dark-slate);
+    line-height: 1.6;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo { 
+    font-weight: bold; 
+    color: var(--pepti-green); 
+    font-size: 24px; 
+    letter-spacing: -1px; 
+}
+
+.logo span { 
+    color: #333; 
+}
+
+.nav-links { 
+    display: flex; 
+    list-style: none; 
+    gap: 30px; 
+}
+
+.nav-links a { 
+    text-decoration: none; 
+    color: #555; 
+    font-size: 14px; 
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--pepti-green);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('https://images.unsplash.com/photo-1532187863486-abf9d39d6618?auto=format&fit=crop&q=80&w=2000');
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.hero h1 { 
+    font-size: 3.5rem; 
+    margin-bottom: 20px; 
+    line-height: 1.2;
+    animation: fadeInDown 0.8s ease;
+}
+
+.hero .btn { 
+    background: var(--pepti-green); 
+    color: white; 
+    padding: 15px 40px; 
+    text-decoration: none; 
+    border-radius: 5px; 
+    font-weight: bold;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.hero .btn:hover {
+    background: #1e6b42;
+    transform: scale(1.05);
+}
+
+/* Trust Bar */
+.trust-bar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 70%;
+    margin: -50px auto 50px;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.trust-item h3 { 
+    font-size: 16px; 
+    margin-bottom: 5px; 
+    color: var(--pepti-green); 
+}
+
+.trust-item p { 
+    font-size: 12px; 
+    color: #777; 
+    margin: 0; 
+}
+
+/* Products Section */
+.products { 
+    padding: 50px 8%; 
+    text-align: center; 
+}
+
+.products h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: var(--dark-slate);
+}
+
+.product-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 40px; 
+    margin-top: 50px; 
+}
+
+.product-card {
+    background: white;
+    border-radius: 15px;
+    padding: 40px 20px;
+    border: 1px solid #eee;
+    transition: all 0.3s ease;
+}
+
+.product-card:hover { 
+    transform: translateY(-10px); 
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1); 
+}
+
+.vial-placeholder { 
+    height: 200px; 
+    background: linear-gradient(135deg, #e0f2e9, #f4f4f4);
+    border-radius: 10px; 
+    margin-bottom: 20px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    color: var(--pepti-green);
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.product-card h3 { 
+    margin: 10px 0; 
+    font-size: 22px;
+    color: var(--dark-slate);
+}
+
+.product-card .specs { 
+    font-size: 12px; 
+    color: var(--pepti-green); 
+    margin-bottom: 10px; 
+    display: block;
+    font-weight: 600;
+}
+
+.product-card .description {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.learn-more { 
+    background: #eee; 
+    color: #333; 
+    padding: 10px 25px; 
+    text-decoration: none; 
+    border-radius: 5px; 
+    font-size: 13px; 
+    font-weight: bold; 
+    transition: all 0.3s;
+    display: inline-block;
+}
+
+.learn-more:hover { 
+    background: var(--pepti-green); 
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Science Section */
+.science {
+    padding: 50px 8%;
+    background: white;
+    text-align: center;
+    border-top: 1px solid #eee;
+}
+
+.science h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--pepti-green);
+}
+
+.science p {
+    font-size: 16px;
+    max-width: 700px;
+    margin: 0 auto;
+    color: #555;
+}
+
+/* About Section */
+.about {
+    padding: 50px 8%;
+    background: var(--soft-white);
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--dark-slate);
+}
+
+.about p {
+    font-size: 16px;
+    max-width: 700px;
+    margin: 0 auto;
+    color: #555;
+}
+
+/* Contact Section */
+.contact {
+    padding: 50px 8%;
+    background: white;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: var(--pepti-green);
+}
+
+#contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contact-form input,
+#contact-form textarea {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+#contact-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+#contact-form button {
+    background: var(--pepti-green);
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#contact-form button:hover {
+    background: #1e6b42;
+}
+
+/* Footer */
+footer {
+    background: var(--dark-slate);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 20px;
+        padding: 15px 4%;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .trust-bar {
+        width: 90%;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .products,
+    .science,
+    .about,
+    .contact {
+        padding: 30px 4%;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+}

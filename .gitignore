@@ -1,0 +1,23 @@
+# Node modules
+node_modules/
+
+# Build output
+dist/
+built/
+
+# Dependency directories
+jspm_packages/
+
+# Runtime data
+.pnp/
+.pnp.js
+
+# System Files
+yarn-error.log
+npm-debug.log
+
+# IDEs
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
